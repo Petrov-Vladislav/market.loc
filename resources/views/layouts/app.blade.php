@@ -94,6 +94,7 @@
     <script src="js/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+    <script src="js/dostavka.js"></script>
 
     <!-- <script src="js/cart.js"></script> -->
 

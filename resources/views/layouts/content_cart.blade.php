@@ -74,8 +74,8 @@
                                 </label>
                             </div>
                         </li>
-                        <li><span>Доставка:</span> <span>Free</span></li>
-                        <li><span>Всего к оплате:</span> <span>$140.00</span></li>
+                        <li><span>Доставка:</span> <span id="price_dost"></span></li>
+                        <li><span>Всего к оплате:</span> <span id="sum">{{$cart_sum}} р.</span></li>
                     </ul>
                     <div class="cart-btn mt-100">
                         <a href="cart.html" class="btn amado-btn w-100">Оплатить</a>
