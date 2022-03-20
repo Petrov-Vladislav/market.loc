@@ -37,11 +37,7 @@
                                 </td>
                                 <td class="qty">
                                     <div class="qty-btn d-flex">
-                                        <div class="quantity">
-                                            <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                            <input type="number" class="qty-text" id="qty" step="1" min="1" max="300" name="quantity" value="1">
-                                            <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                        </div>
+                                        1 шт.
                                     </div>
                                 </td>
                             </tr>
@@ -78,7 +74,7 @@
                         <li><span>Всего к оплате:</span> <span id="sum">{{$cart_sum}} р.</span></li>
                     </ul>
                     <div class="cart-btn mt-100">
-                        <a href="cart.html" class="btn amado-btn w-100">Оплатить</a>
+                        <a href="order.html" class="btn amado-btn w-100">Оформить заказ</a>
                     </div>
                 </div>
             </div>
