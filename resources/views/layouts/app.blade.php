@@ -19,6 +19,8 @@
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="css/core-style.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/css/suggestions.min.css" rel="stylesheet" />
+
 
 </head>
 
@@ -95,7 +97,7 @@
     <!-- Active js -->
     <script src="js/active.js"></script>
     <script src="js/dostavka.js"></script>
-
+    
     <!-- <script src="js/cart.js"></script> -->
 
 </body>

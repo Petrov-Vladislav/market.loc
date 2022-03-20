@@ -74,7 +74,7 @@
                         <li><span>Всего к оплате:</span> <span id="sum">{{$cart_sum}} р.</span></li>
                     </ul>
                     <div class="cart-btn mt-100">
-                        <a href="order.html" class="btn amado-btn w-100">Оформить заказ</a>
+                        <a href="{{route('order')}}" class="btn amado-btn w-100">Оформить заказ</a>
                     </div>
                 </div>
             </div>

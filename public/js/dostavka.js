@@ -15,3 +15,4 @@ dostav_delivery.addEventListener('click', function() {
     price_dost.innerHTML = "500 р.";
     total_summa.innerHTML = summa + 500 + ' р.';
 });
+

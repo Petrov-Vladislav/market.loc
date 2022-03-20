@@ -4,70 +4,44 @@
             <div class="col-12 col-lg-8">
                 <div class="checkout_details_area mt-50 clearfix">
                     <div class="cart-title">
-                        <h2>Checkout</h2>
+                        <h2>Оформление заказа</h2>
                     </div>
                     <form action="#" method="post">
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <input type="text" class="form-control" id="first_name" value="" placeholder="First Name" required="">
+                                <input type="text" class="form-control" id="first_name" value="" placeholder="Имя" required="">
                             </div>
                             <div class="col-md-6 mb-3">
-                                <input type="text" class="form-control" id="last_name" value="" placeholder="Last Name" required="">
-                            </div>
-                            <div class="col-12 mb-3">
-                                <input type="text" class="form-control" id="company" placeholder="Company Name" value="">
+                                <input type="text" class="form-control" id="last_name" value="" placeholder="Фамилия" required="">
                             </div>
                             <div class="col-12 mb-3">
                                 <input type="email" class="form-control" id="email" placeholder="Email" value="">
                             </div>
                             <div class="col-12 mb-3">
-                                <select class="w-100" id="country" style="display: none;">
-                                    <option value="usa">United States</option>
-                                    <option value="uk">United Kingdom</option>
-                                    <option value="ger">Germany</option>
-                                    <option value="fra">France</option>
-                                    <option value="ind">India</option>
-                                    <option value="aus">Australia</option>
-                                    <option value="bra">Brazil</option>
-                                    <option value="cana">Canada</option>
-                                </select>
-                                <div class="nice-select w-100" tabindex="0"><span class="current">United States</span>
-                                    <ul class="list">
-                                        <li data-value="usa" class="option selected">United States</li>
-                                        <li data-value="uk" class="option">United Kingdom</li>
-                                        <li data-value="ger" class="option">Germany</li>
-                                        <li data-value="fra" class="option">France</li>
-                                        <li data-value="ind" class="option">India</li>
-                                        <li data-value="aus" class="option">Australia</li>
-                                        <li data-value="bra" class="option">Brazil</li>
-                                        <li data-value="cana" class="option">Canada</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <input type="text" class="form-control mb-3" id="street_address" placeholder="Address" value="">
-                            </div>
-                            <div class="col-12 mb-3">
-                                <input type="text" class="form-control" id="city" placeholder="Town" value="">
+                                <input id="address" name="address" type="text" class="form-control mb-3" placeholder="Адрес" value="">
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                                <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/css/suggestions.min.css" rel="stylesheet" />
+                                <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/js/jquery.suggestions.min.js"></script>
+
+                                <script>
+                                    $("#address").suggestions({
+                                        token: "24eb7082e0d6c2ba0a44ffdda061340d69b36dcb",
+                                        type: "ADDRESS",
+                                        /* Вызывается, когда пользователь выбирает одну из подсказок */
+                                        onSelect: function(suggestion) {
+                                            console.log(suggestion);
+                                        }
+                                    });
+                                </script>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <input type="text" class="form-control" id="zipCode" placeholder="Zip Code" value="">
+                                <input type="text" class="form-control" id="zipCode" placeholder="Почтовый индекс" value="">
                             </div>
                             <div class="col-md-6 mb-3">
-                                <input type="number" class="form-control" id="phone_number" min="0" placeholder="Phone No" value="">
+                                <input type="number" class="form-control" id="phone_number" min="0" placeholder="Телефон" value="">
                             </div>
                             <div class="col-12 mb-3">
-                                <textarea name="comment" class="form-control w-100" id="comment" cols="30" rows="10" placeholder="Leave a comment about your order"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <div class="custom-control custom-checkbox d-block mb-2">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                    <label class="custom-control-label" for="customCheck2">Create an accout</label>
-                                </div>
-                                <div class="custom-control custom-checkbox d-block">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                    <label class="custom-control-label" for="customCheck3">Ship to a different address</label>
-                                </div>
+                                <textarea name="comment" class="form-control w-100" id="comment" cols="30" rows="10" placeholder="Комментарий к заказу"></textarea>
                             </div>
                         </div>
                     </form>
