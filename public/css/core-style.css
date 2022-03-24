@@ -1126,7 +1126,10 @@ img {
   z-index: 1;
   margin-bottom: 50px;
   overflow: hidden;
-  background-color: #ffffff; }
+  background-color: #ebeff1; }
+  .single-product-wrapper:hover {
+    background-color: #dee2e4;
+  }
   .single-product-wrapper .product-img {
     position: relative;
     z-index: 1;
@@ -1452,6 +1455,14 @@ img {
     width: 100%;
     border-radius: 0;
     background-color: #f5f7fa; }
+
+  .view_cart:hover {
+    background-color: #ebe9e9;
+  }
+
+  #new_dostavka {
+    display: none;
+  }
 
 /* ##### The End ##### */
 
