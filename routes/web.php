@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CartController;
-use App\Http\Controllers\OrderController;
 use App\Models\Smartphone;
 use Illuminate\Support\Facades\Auth;
 
@@ -28,7 +27,7 @@ Route::get('monobloks', [ProductsController::class, 'productMonobloks'])->name('
 Route::get('naushniki', [ProductsController::class, 'productNaushniki'])->name('naushniki');
 Route::post('addToCart', [CartController::class, 'cart'])->name('addToCart');
 Route::get('cart', [CartController::class, 'cart_user'])->name('cart');
-Route::get('order', [OrderController::class, 'order'])->name('order');
+Route::post('delivery', [CartController::class, 'delivery'])->name('delivery');
 
 Route::post('delFromCart', [CartController::class, 'delete_cart'])->name('delFromCart');
 

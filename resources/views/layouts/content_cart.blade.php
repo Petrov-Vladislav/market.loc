@@ -86,16 +86,17 @@
                                 <div class="cart-title">
                                     <h2>Оформление доставки</h2>
                                 </div>
-                                <form action="#" method="post">
+                                <form action="{{route('delivery')}}" method="post">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
-                                            <input type="text" class="form-control" id="first_name" value="" placeholder="Имя" required>
+                                            <input type="text" class="form-control" id="first_name" name="name" value="" placeholder="Имя" required>
                                         </div>
                                         <div class="col-md-6 mb-3">
-                                            <input type="text" class="form-control" id="last_name" value="" placeholder="Фамилия" required>
+                                            <input type="text" class="form-control" id="last_name" name="surname" value="" placeholder="Фамилия" required>
                                         </div>
                                         <div class="col-12 mb-3">
-                                            <input type="email" class="form-control" id="email" placeholder="Email" value="" required>
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="" required>
                                         </div>
                                         <div class="col-12 mb-3">
                                             <input id="address" name="address" type="text" class="form-control mb-3" placeholder="Адрес" value="" required>
@@ -115,13 +116,16 @@
                                             </script>
                                         </div>
                                         <div class="col-md-6 mb-3">
-                                            <input type="tel" class="form-control" id="phone_number" placeholder="Телефон" value="" pattern="+7[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+                                            <input type="tel" class="form-control" id="phone_number" name="telephone" placeholder="Телефон" value="" pattern="+7[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
                                         </div>
                                         <div class="col-md-6 mb-3">
-                                            <input type="date" class="form-control" id="date" placeholder="Дата доставки" value="" required>
+                                            <input type="date" class="form-control" id="date" name="date_delivery" placeholder="Дата доставки" value="" required>
                                         </div>
                                         <div class="col-12 mb-3">
-                                            <textarea name="comment" class="form-control w-100" id="comment" cols="30" rows="10" placeholder="Комментарий к заказу"></textarea>
+                                            <textarea name="commentary" class="form-control w-100" id="comment" cols="30" rows="10" placeholder="Комментарий к заказу"></textarea>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <input type="submit" class="btn amado-btn w-100" value="Оформить">
                                         </div>
                                     </div>
                                 </form>

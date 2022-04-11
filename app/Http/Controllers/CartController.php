@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Smartphone;
 use App\Models\Cart;
+use App\Models\Delivery;
 use App\Models\Noutbook;
 use App\Models\Monoblok;
 use App\Models\Naushniki;
@@ -93,5 +94,18 @@ class CartController extends Controller
         $count_cart = Cart::where('user_id', $user)->count();
         $request->session()->put('count_prod', $count_cart);
         return redirect()->route('cart');
+    }
+
+    public function delivery(Request $request) {
+        $delivery = new Delivery;
+        $delivery->name = $request->name;
+        $delivery->surname = $request->surname;
+        $delivery->email = $request->email;
+        $delivery->address = $request->address;
+        $delivery->telephone = $request->telephone;
+        $delivery->date_delivery = $request->date_delivery;
+        $delivery->commentary = $request->commentary;
+        $delivery->save();
+        return redirect()->back();
     }
 }
